@@ -22,10 +22,12 @@
   </dependencies>
 ``
 7. Create a new Java class in 'src/test/java' dir
-8. Download and install Android Studio: http://developer.android.com/sdk/index.html
-9. cd /Users/nicholas.goolcharan/Library/Android/sdk/platform-tools<dependencies>
-10.Run file: './adb devices'
-11.Downlad and extract ChromeDriver to ~/Documents: http://chromedriver.storage.googleapis.com/index.html?path=2.13/
-12.Go to cd ~/Documents
-13.Run file: './chromedriver'
+8. Configure Android Device to have "USB Debugging" set to true
+9. Connect Android Device to Machine via usb
+10. Download and install Android Studio: http://developer.android.com/sdk/index.html
+11. cd /Users/nicholas.goolcharan/Library/Android/sdk/platform-tools<dependencies>
+12.Run file: './adb devices'
+13.Downlad and extract ChromeDriver to ~/Documents: http://chromedriver.storage.googleapis.com/index.html?path=2.13/
+14.Go to cd ~/Documents
+15.Run file: './chromedriver'
 

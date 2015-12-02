@@ -24,7 +24,7 @@ public class SmokeTest extends BaseTest {
 	@Test
 	public void startWebDriver(){	
 		driver.get(baseUrl);
-	    driver.findElement(By.cssSelector("span.launcher-button-text.ng-binding")).click();
+	    driver.findElement(Elements.Start_Button).click();
 	    new Select(driver.findElement(By.id("catEN"))).selectByVisibleText("BATTERY");
 	    new Select(driver.findElement(By.id("year"))).selectByVisibleText("2003");
 	    new Select(driver.findElement(By.id("make"))).selectByVisibleText("ACURA");
