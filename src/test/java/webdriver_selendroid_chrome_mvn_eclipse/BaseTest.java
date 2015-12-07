@@ -25,6 +25,16 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
 
+	
+	public void finalize(){
+		try {
+			tearDown();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public void tearDown() throws Exception {
 		driver.quit();
 	}

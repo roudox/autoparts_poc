@@ -46,6 +46,7 @@ public class View_01_LaunchPage extends BaseTest {
 	    	assertEquals("Select your vehicle year, make and model to find the right fit.", driver.findElement(By.cssSelector(".alt-title.ng-binding")).getText());
 	    	
 	    	// 6 web buttons (battery, carriers & racks, filter, light bulbs, spark plugs, wiper blades) are present
+	    	
 	    	assertEquals("BATTERY", driver.findElement(By.xpath("//li[1]/div/span")).getText());
 	    	assertEquals("CARRIERS & RACKS", driver.findElement(By.xpath("//li[2]/div/span")).getText());
 	    	assertEquals("FILTER", driver.findElement(By.xpath("//li[3]/div/span")).getText());

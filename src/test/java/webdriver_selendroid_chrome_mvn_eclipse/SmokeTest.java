@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 public class SmokeTest extends BaseTest {
 
 	
+	private Data data=new Data();
+	
 	@Before
 	  public void setUp() throws Exception {
 		super.setUp("http://autopartfinder.cantire.net/#/config/0022/en/00912383");
@@ -25,11 +27,14 @@ public class SmokeTest extends BaseTest {
 	public void startWebDriver(){	
 		driver.get(baseUrl);
 	    driver.findElement(Elements.Start_Button).click();
-	    new Select(driver.findElement(By.id("catEN"))).selectByVisibleText("BATTERY");
-	    new Select(driver.findElement(By.id("year"))).selectByVisibleText("2003");
-	    new Select(driver.findElement(By.id("make"))).selectByVisibleText("ACURA");
-	    new Select(driver.findElement(By.id("model"))).selectByVisibleText("RSX");
-	    new Select(driver.findElement(By.id("engine"))).selectByVisibleText("4-1998 2.0L DOHC");
+	    
+	    AutopartsData vehicle=data.getNext();
+	    System.out.println(vehicle);
+	    new Select(driver.findElement(By.id("catEN"))).selectByVisibleText(vehicle.getCatalog());
+	    new Select(driver.findElement(By.id("year"))).selectByVisibleText(vehicle.getYear());
+	    new Select(driver.findElement(By.id("make"))).selectByVisibleText(vehicle.getMake());
+	    new Select(driver.findElement(By.id("model"))).selectByVisibleText(vehicle.getModel());
+	    new Select(driver.findElement(By.id("engine"))).selectByVisibleText(vehicle.getEngine());
 	    driver.findElement(By.cssSelector(".search-button")).click();
 	    driver.findElement(By.cssSelector("div.eye-icon")).click();
 	    driver.findElement(By.cssSelector("li.pdp-label.ng-isolate-scope.active")).click();
