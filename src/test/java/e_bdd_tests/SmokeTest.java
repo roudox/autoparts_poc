@@ -1,4 +1,4 @@
-package webdriver_selendroid_chrome_mvn_eclipse;
+package e_bdd_tests;
 
 import org.junit.After;
 import org.junit.Before;
@@ -6,9 +6,13 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
+import a_setup.BaseTest;
+import b_data.AutopartsData;
+import b_data.Data;
+import c_locators.Elements;
+
 public class SmokeTest extends BaseTest {
 
-	
 	private Data data=new Data();
 	
 	@Before
@@ -17,6 +21,7 @@ public class SmokeTest extends BaseTest {
 		}
 
 	@Override
+	
 	@After
 	  public void tearDown() throws Exception {
 	   super.tearDown();
@@ -30,6 +35,7 @@ public class SmokeTest extends BaseTest {
 	    
 	    AutopartsData vehicle=data.getNext();
 	    System.out.println(vehicle);
+	    
 	    new Select(driver.findElement(By.id("catEN"))).selectByVisibleText(vehicle.getCatalog());
 	    new Select(driver.findElement(By.id("year"))).selectByVisibleText(vehicle.getYear());
 	    new Select(driver.findElement(By.id("make"))).selectByVisibleText(vehicle.getMake());
@@ -42,7 +48,4 @@ public class SmokeTest extends BaseTest {
 	    driver.findElement(By.cssSelector(".pdp-close-button-content")).click();
 	    driver.findElement(By.cssSelector("img.pull-left.center-icon")).click();
 	}
-	
-
-
 }

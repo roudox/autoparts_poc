@@ -1,4 +1,4 @@
-package webdriver_selendroid_chrome_mvn_eclipse;
+package b_data;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

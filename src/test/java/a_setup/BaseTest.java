@@ -1,4 +1,4 @@
-package webdriver_selendroid_chrome_mvn_eclipse;
+package a_setup;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
