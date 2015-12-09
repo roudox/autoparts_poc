@@ -14,6 +14,19 @@
 5. restart firefox
 6. on firefox toolbar, there should be a Selenium IDE plugin icon after successful installation
 
+#ANDROID STUDIO - INSTALL
+
+1. go to url: http://developer.android.com/sdk/index.html
+2. click on download link
+3. download Android Studio
+4. install Android Studio
+
+#CHROME DRIVER - INSTALL
+
+1. go to url: http://chromedriver.storage.googleapis.com/index.html?path=2.13/
+2. download Chrome Driver
+3. extract file to ~/Sites directory
+
 #ECLIPSE - INSTALL
 
 1. go to url: https://eclipse.org/downloads/
@@ -25,7 +38,15 @@
 
 #CREATE A GIT HUB ACCOUNT
 
+1. go to: https://github.com/join
+2. follow steps to create a personal account, not corporate
+3. login to your new personal account
+
 #CLONE THIS REPO ON YOUR LOCAL MACHINE
+
+1. open terminal
+2. navigate to a directory where this code will live eg. 'cd ~/Sites'
+3. run command: git clone https://github.com/roudox/autoparts_poc.git
 
 #IMPORT THIS MAVEN PROJECT
 
@@ -39,10 +60,14 @@
 8. click: Finish
 9. this Repo should now be visible on left pane, within "Project" pane
 
+#CONFIGURE ANDROID DEVICE
 
+1. connect an android device via USB to machine
+2. navigate to: Settings>Developer Options
+3. locate: USB Debugging option
+4. Turn On option for USB Debugging
 
-
-8. Configure Android Device to have "USB Debugging" set to true
+"USB Debugging" set to true
 9. Connect Android Device to Machine via usb
 10. Download and install Android Studio: http://developer.android.com/sdk/index.html
 11. cd /Users/nicholas.goolcharan/Library/Android/sdk/platform-tools<dependencies>
